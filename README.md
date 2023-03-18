@@ -1,4 +1,4 @@
-# CMSC-447-CRUD-Assignment
+# CMSC 447 CRUD Assignment
 This is HW2 for CMSC 447, Spring 2023. It is for practicing CRUD operations on a database via an application developed with a combination of frameworks and modules. This repo assumes you have all of the requisite packages and applications installed. MySQL Workbench was used to test the workings (specifically the backend, since the user interface is not ready) of this assignment.
 
 This homework assignment is somewhat incomplete. The following should be expected from what is present in this repository:
