@@ -38,23 +38,5 @@
       <button type="submit">Delete</button>
     </form>
     <br>
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Score</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for row in names %}
-          <tr>
-            <td>{{row.id}}</td>
-            <td>{{row.name}}</td>
-            <td>{{row.score}}</td>
-          </tr>
-        {% endfor %}
-      </tbody>
-    </table>
   </body>
 </html>
