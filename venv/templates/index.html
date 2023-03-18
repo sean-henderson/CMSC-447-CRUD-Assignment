@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CMSC 447 HW2</title>
+  </head>
+  <body>
+    <h1>CRUD Operations</h1>
+    <form method="post" action="/insert">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br>
+      <label for="id">ID:</label>
+      <input type="text" id="id" name="id" required>
+      <br>
+      <label for="score">Score:</label>
+      <input type="text" id="score" name="score" required>
+      <br>
+      <button type="submit">Insert</button>
+    </form>
+    <br>
+    <form method="post" action="/update">
+      <label for="id">ID:</label>
+      <input type="text" id="id" name="id" required>
+      <br>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+      <br>
+      <label for="score">Score:</label>
+      <input type="text" id="score" name="score">
+      <br>
+      <button type="submit">Update</button>
+    </form>
+    <br>
+    <form method="get" action="/delete/{{name.id}}">
+      <label for="id">ID:</label>
+      <input type="text" id="id" name="id" required>
+      <button type="submit">Delete</button>
+    </form>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in names %}
+          <tr>
+            <td>{{row.id}}</td>
+            <td>{{row.name}}</td>
+            <td>{{row.score}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
